@@ -8,5 +8,5 @@ How to use:
 3. Open Console tab on F12 (Inspect function)
 4. Input one answer to the assignment and the answers will appear in Console tab
 5. Input all the answers that Shawn gives you! Congratulate!
---
+---
 For more information and guide, please go to my Blog
