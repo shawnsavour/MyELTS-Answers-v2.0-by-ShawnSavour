@@ -9,4 +9,5 @@ How to use:
 4. Input one answer to the assignment and the answers will appear in Console tab
 5. Input all the answers that Shawn gives you! Congratulate!
 ---
-For more information and guide, please go to my Blog
+For more information and guide, please go to my Blog ShawnSavour.xyz
+Thank you!
