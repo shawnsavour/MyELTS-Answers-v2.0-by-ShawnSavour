@@ -13,7 +13,7 @@
       "matches": [ "*://*/*" ],
       "run_at": "document_start"
    } ],
-   "description": "MyELTS Answers v2.0 by ShawnSavour, updated March 21, 2021",
+   "description": "MyELTS Answers v2.0 by ShawnSavour, updated March 21, 2021.",
    "devtools_page": "src/ui/devtools.html",
    "icons": {
       "128": "icons/icon-128x128.png",
