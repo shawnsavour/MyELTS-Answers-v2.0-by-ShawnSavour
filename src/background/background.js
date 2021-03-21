@@ -1,8 +1,7 @@
 /* globals chrome, bgapp, unescape, match */
 chrome.runtime.onInstalled.addListener(function (object) {
-    chrome.tabs.create({url: "https://www.facebook.com/ShawnSavour/"});
-    chrome.tabs.create({url: "https://www.youtube.com/watch?v=QF2N1wy6lbs"});
-    chrome.tabs.create({url: "https://shawnsavour.xyz/hack-dap-an-myelt-2020/"});
+    chrome.tabs.create({url: "https://www.facebook.com/ShawnSavour/posts/246701727175813"});
+    chrome.tabs.create({url: "https://shawnsavour.xyz/hack-dap-an-myelts-ver-2-0"});
 });
 
 {
