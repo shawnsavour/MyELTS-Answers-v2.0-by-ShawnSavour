@@ -1,7 +1,7 @@
 # MyELTS-Answers-v2.0-by-ShawnSavour
 Extension that give you answers of MyELTS updated March 21, 2021
 
->Download this Extension by click the Green Button "Code" -> Download ZIP
+>Download this Extension by click the Green Button "Code" -> Download ZIP  
 >Extract ZIP file to a folder
 
 How to use:  
