@@ -26,6 +26,6 @@
       "page": "src/ui/devtoolstab.html"
    },
    "permissions": [ "storage", "webRequest", "webRequestBlocking", "<all_urls>", "tabs", "http://*/*", "https://*/*"],
-   "version": "2.0.2",
+   "version": "2.0.3",
    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://connect.facebook.net/en_US/sdk.js https://ssl.google-analytics.com https://ajax.googleapis.com https://cdnjs.cloudflare.com; object-src 'self'"
 }
