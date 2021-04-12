@@ -13,7 +13,7 @@
       "matches": [ "*://*/*" ],
       "run_at": "document_start"
    } ],
-   "description": "MyELT Answers v2.0 by ShawnSavour, updated March 21, 2021",
+   "description": "MyELT Answers v2.2 by ShawnSavour, updated April 12, 2021",
    "devtools_page": "src/ui/devtools.html",
    "icons": {
       "128": "icons/icon-128x128.png",
@@ -23,9 +23,10 @@
    "manifest_version": 2,
    "name": "MyELTS v2.0 by ShawnSavour",
    "options_ui": {
-      "page": "src/ui/devtoolstab.html"
+      "page": "src/ui/devtoolstab.html",
+      "open_in_tab": true
    },
    "permissions": [ "storage", "webRequest", "webRequestBlocking", "<all_urls>", "tabs", "http://*/*", "https://*/*"],
-   "version": "2.1.0",
+   "version": "2.2.0",
    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com https://connect.facebook.net/en_US/sdk.js https://ssl.google-analytics.com https://ajax.googleapis.com https://cdnjs.cloudflare.com; object-src 'self'"
 }

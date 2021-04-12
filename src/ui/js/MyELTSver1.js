@@ -1,0 +1,2 @@
+document.getElementById("activity_container").contentWindow.document.getElementById("content").getElementsByClassName("toolbar control-btns")[0].innerHTML = `<button class="" enabled="true" data-function="showAnswer">Shawn Show Answers</button><button class="submit-btn submit stock-btn" enabled="" title="Please complete all items!" data-function="submit">Submit</button><button class="result-btn stock-btn" title="result" data-function="showResult" style="">Shawn Results</button></div>`;
+// alert('ver1');

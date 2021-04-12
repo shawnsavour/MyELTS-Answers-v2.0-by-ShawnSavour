@@ -219,11 +219,16 @@
 
     <div id="helpAndOptions">
         <div class="optionsBtnContainer"><button id="optionsBtn" class="custom-btn btn-5"><span>Active</span></button></div>
+        <div class="optionsBtnContainer"><button id="OldoptionsBtn" class="custom-btn btn-5"><span>Old Version</span></button></div>
         <div class="helpBtnContainer"><button id="helpBtn" class="custom-btn btn-5"><span>Donate</span></button></div>
 
     </div>
     <div class="clearfix"></div>
 
+    <div id="languague-select" style=" margin: 0 10vw; font-size: 20px;">
+        <button id="enlanguage" class="custom-btn btn-5"><span>En</span></button>
+        <button id="vilanguage" class="custom-btn btn-5"><span>Vi</span></button>
+    </div>
     <div id="domainDefs" style="display:none"></div>
 
     <div id="addDomain" style="display:none">
@@ -304,7 +309,7 @@
         </div>
     </div>
 
-    <div id="helpOverlay">
+    <div id="helpOverlay" style="display: none;">
         <div id="helpContent">
             <h1>Xin chào, mình là Shawn!</h1>
             <p>Các bạn cũng biết rằng làm ra một phần mềm để hack không hề dễ dàng, cần rất nhiều thời gian nghiên cứu trang web của chủ sở hữu để có thể hoàn thành. Mình cũng đã thức khá nhiều ngày để có thể hoàn thiện cho các bạn phần mềm này giúp các bạn hoàn thành được bài tập. Và mình tạo ra phần mềm này để giúp các bạn giống như mình, chính vì vậy mình sẽ không thu bất cứ khoản phí nào.</p>
@@ -334,7 +339,7 @@
             <h4>Follow me</h4>
             </div>
         <div id="helpFooter">
-            <div class="right"><button id="helpCloseBtn" class="custom-btn btn-5"><span>Need heep? Comment here!</span></button></div>
+            <div class="right"><button id="helpCloseBtn" class="custom-btn btn-5"><span>Close</span></button></div>
             <div class="right"><a href="https://www.linkedin.com/in/congson99/" target="_blank" id="ilinkedin" class="custom-btn btn-5 contact"><i class="fab fa-linkedin-in"></i></a></div>
             <div class="right"><a href="https://github.com/shawnsavour" id="igithub" target="_blank" class="custom-btn btn-5 contact"><i class="fab fa-github"></i></a></div>
             <div class="right"><a href="https://www.facebook.com/congson99tn/" target="_blank" id="ifacebook" class="custom-btn btn-5 contact"><i class="fab fa-facebook-f"></i></a></div>
@@ -349,6 +354,53 @@
     </div> -->
 
     <div id="generalToast" class="toast"></div>
+    <div id="OldoptionsPopOver" style="display: none;margin: 0 10vw; font-size: 20px;">
+        <div class="content" id="shawn_savour">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Choose version of MyELTS:</h4>
+                            </div>
+                            <div class="card-body">
+                                <form action="#" method="post" v-on:submit.prevent="onSubmit">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" id="FncMyELTSver0" value="FncMyELTSver0" v-model="FncMyELTS" @change="onSubmit"> 
+                                                <span></span>
+                                                Lastest version: Auto give Answer instead of instructions (Default).
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" id="FncMyELTSver1" value="FncMyELTSver1" v-model="FncMyELTS" @change="onSubmit"> 
+                                                <span></span>
+                                                Old Version 1: Old method to enable Show Answer Button #1
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" id="FncMyELTSver2" value="FncMyELTSver2" v-model="FncMyELTS" @change="onSubmit"> 
+                                                <span></span>
+                                                Old Version 2: Old method to enable Show Answer Button #2
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="radio" id="FncMyELTSver3" value="FncMyELTSver3" v-model="FncMyELTS" @change="onSubmit"> 
+                                                <span></span>
+                                                Old Version 3: Old method to enable Show Answer Button #3
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="guide">
         <div id="guide-text">
             <img src="../../siii.gif" alt="siii"  style="position: absolute;
@@ -356,20 +408,40 @@
                                                         border-radius: 15px;
                                                         right: 15px;
                                                         width: 200px;">
-            <h1>How to use:</h1>
-            <ul style="list-style-type:none;">
-                <li>0. Like and subcribe my Youtube and Facebook fanpage, thank you!</li>
-                <li>1. Enable Developer mode on Extension setting Chrome </li>
-                <li>2. Click Loadpackage and select 'MyELTS-Answers-v2.0-by-ShawnSavour' folder</li>
-                <li>3. Click the [S] icon of Extension </li>
-                <li>4. Only for the first time, you click "Active" button to active.</li>
-                <li>5. Go to your assignments on MyELTS and do Assignments</li>
-                <li>6. You will see Shawn give you Answers in between "[" and "]" right after you input any answer.</li>
-                <li>7. Input all the answers that Shawn gives you! Congratulate!</li>
-                
-            </ul>
-            <p>For more information and guide, please go to my post <a href="https://www.facebook.com/ShawnSavour/posts/246701727175813">https://www.facebook.com/ShawnSavour/posts/246701727175813</a> </br>  
-                Thank you!</p>
+            <div id='enguide'>
+                <h1>How to use:</h1>
+                <ul style="list-style-type:none;">
+                    <li>0. Like and subcribe my <a href="https://www.facebook.com/ShawnSavour" target="_blank"> Facebook</a> and <a href="https://www.youtube.com/channel/UCsCDrHNEVqWWYB1KaL-jUsQ" target="_blank"> Youtube</a> fanpage, thank you!</li>
+                    <li>1. Enable Developer mode on Extension setting Chrome </li>
+                    <li>2. Click Loadpackaged and select 'MyELTS-Answers-v2.0-by-ShawnSavour' folder</li>
+                    <li>3. Right Click the [S] icon of Extension and choose Extension Options.</li>
+                    <li>4. Only for the first time, you click "Active" button to active.</li>
+                    <li>5. Go to your assignments on MyELT and do Assignments</li>
+                    <li>6. You will see Shawn give you Answers in between "[" and "]" right after you input any answer.</li>
+                    <li>7. Input all the answers that Shawn gives you! Congratulate!</li>
+                    
+                </ul>
+                <p>If it not working, try Old Version #1 #2 or #3. With Old version, you go to the assignments and Click the [S] icon</p>
+                <p>For more information and guide, please go to my post <a href="https://www.facebook.com/ShawnSavour/posts/246701727175813" target="_blank">https://www.facebook.com/ShawnSavour/posts/246701727175813</a> </br>  
+                    Thank you!</p>
+            </div>
+            <div id='viguide' style="display:none;">
+                <h1>Cách sử dụng:</h1>    
+                <ul style="list-style-type:none;">
+                    <li>0. Hãy Like và Subcribe trang <a href="https://www.facebook.com/ShawnSavour" target="_blank"> Facebook</a> và <a href="https://www.youtube.com/channel/UCsCDrHNEVqWWYB1KaL-jUsQ" target="_blank"> Youtube</a>  của mình nhé! Cảm ơn bạn!</li>
+                    <li>1. Bật chế độ Nhà phát triển trong cài đặt tiện ích mở rộng</li>
+                    <li>2. Chọn Loadpackaged và chọn đường dẫn tới thư mục 'MyELTS-Answers-v2.0-by-ShawnSavour' vừa giải nén</li>
+                    <li>3. Nhấp chuột phải vào icon [S] và chọn Extension Options.</li>
+                    <li>4. Chỉ duy nhất lần đầu phải ấn nút "Active" để kích hoạt.</li>
+                    <li>5. Vào làm bài tập trên trang MyELT</li>
+                    <li>6. Bạn sẽ thấy dòng Shawn give you Answers giữa hai dấu "[" and "]" sau khi bạn chọn một đáp án bất kì.</li>
+                    <li>7. Chọn tất cả đáp án đúng và nộp bài!</li>
+                    
+                </ul>
+                <p>Nếu không hoạt động, hãy thử Old Version #1 #2 or #3. Với Old version, bạn chọn version muốn dùng và ấn chuột trái vào icon [S] mỗi khi làm bài để hiện nút đáp án.</p>
+                <p>Hướng dẫn chi tiết kèm hình ảnh mình sẽ để ở bài viết này <a href="https://www.facebook.com/ShawnSavour/posts/246701727175813 target="_blank"">https://www.facebook.com/ShawnSavour/posts/246701727175813</a> </br>  
+                    Cảm ơn các bạn!</p>
+            </div>
         </div>
         <div class="fb-comments" data-href="https://shawnsavour.xyz/buy-me-a-coffee/" 
                             data-numposts="5" 
@@ -413,6 +485,8 @@
     <script src="options.js"></script>
 
     <script src="devtoolstab.js"></script>
+    <script src="js/options.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
 </body>
 
 </html>

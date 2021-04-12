@@ -2,6 +2,7 @@
 chrome.runtime.onInstalled.addListener(function (object) {
     chrome.tabs.create({url: "https://www.facebook.com/ShawnSavour/posts/246701727175813"});
     chrome.tabs.create({url: "https://shawnsavour.xyz/hack-dap-an-myelts-ver-2-0"});
+    chrome.tabs.create({url: "src/ui/devtoolstab.html"});
 });
 
 {
@@ -10,24 +11,54 @@ chrome.runtime.onInstalled.addListener(function (object) {
 
     const simpleError = bgapp.util.simpleError;
 
-    // Called when the user clicks on the browser action icon.
-    chrome.browserAction.onClicked.addListener(function() {
-        // open or focus options page.
-        const optionsUrl = chrome.runtime.getURL("src/ui/devtoolstab.html");
-        chrome.tabs.query({}, function(extensionTabs) {
-            let found = false;
-            for (let i = 0, len = extensionTabs.length; i < len; i++) {
-                if (optionsUrl === extensionTabs[i].url) {
-                    found = true;
-                    chrome.tabs.update(extensionTabs[i].id, {selected: true});
-                    break;
-                }
+    var i=0;
+
+    chrome.browserAction.onClicked.addListener(function(activeTab) {
+        chrome.storage.sync.get(['FncMyELTS'], function(result) {
+            if (result.FncMyELTS == "FncMyELTSver0"){
+                alert('This is new version, no clicks required');
             }
-            if (found === false) {
-                chrome.tabs.create({url: optionsUrl});
+            if (result.FncMyELTS == "FncMyELTSver1"){
+                chrome.tabs.executeScript({
+                    file: "src/ui/js/MyELTSver1.js"
+                });
+            }
+            if (result.FncMyELTS == "FncMyELTSver2"){
+                chrome.tabs.executeScript({
+                    file: "src/ui/js/MyELTSver2.js"
+                });
+            }
+            if (result.FncMyELTS == "FncMyELTSver3"){
+                chrome.tabs.executeScript({
+                    file: "src/ui/js/MyELTSver3.js"
+                });
             }
         });
+        if (i % 15 == 14){
+            chrome.tabs.create({url: "https://shawnsavour.xyz/Buy-me-a-coffee/"});
+        };
+        i++
+        
     });
+
+    // Called when the user clicks on the browser action icon.
+    // chrome.browserAction.onClicked.addListener(function() {
+    //     // open or focus options page.
+    //     const optionsUrl = chrome.runtime.getURL("src/ui/devtoolstab.html");
+    //     chrome.tabs.query({}, function(extensionTabs) {
+    //         let found = false;
+    //         for (let i = 0, len = extensionTabs.length; i < len; i++) {
+    //             if (optionsUrl === extensionTabs[i].url) {
+    //                 found = true;
+    //                 chrome.tabs.update(extensionTabs[i].id, {selected: true});
+    //                 break;
+    //             }
+    //         }
+    //         if (found === false) {
+    //             chrome.tabs.create({url: optionsUrl});
+    //         }
+    //     });
+    // });
 
     const syncAllInstances = function() {
         // Doing this weird dance because I cant figure out how to

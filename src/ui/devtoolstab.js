@@ -74,6 +74,18 @@
         ui.helpCloseBtn.on("click", function() {
             ui.helpOverlay.hide();
         });
+        ui.OldoptionsBtn.on("click", function() {
+            ui.OldoptionsPopOver.toggle();
+        });
+
+        ui.enlanguage.on("click", function() {
+            ui.enguide.show();
+            ui.viguide.hide();
+        });
+        ui.vilanguage.on("click", function() {
+            ui.viguide.show();
+            ui.enguide.hide();
+        });
 
         if (!chrome.devtools) {
             chrome.runtime.sendMessage({
