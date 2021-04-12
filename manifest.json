@@ -21,7 +21,7 @@
       "48": "icons/icon-48x48.png"
    },
    "manifest_version": 2,
-   "name": "MyELTS v2.0 by ShawnSavour",
+   "name": "MyELTS v2.2 by ShawnSavour",
    "options_ui": {
       "page": "src/ui/devtoolstab.html",
       "open_in_tab": true
