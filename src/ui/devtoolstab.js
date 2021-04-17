@@ -87,29 +87,29 @@
             ui.enguide.hide();
         });
 
-        if (!chrome.devtools) {
-            chrome.runtime.sendMessage({
-                action: "getSetting",
-                setting: "tabPageNotice"
-            }, function(data) {
+        // if (!chrome.devtools) {
+        //     chrome.runtime.sendMessage({
+        //         action: "getSetting",
+        //         setting: "tabPageNotice"
+        //     }, function(data) {
 
-                if (data !== "true") {
-                    ui.tabPageNotice.find("a").on("click", function(e) {
-                        e.preventDefault();
-                        chrome.runtime.sendMessage({
-                            action: "setSetting",
-                            setting: "tabPageNotice",
-                            value: "true"
-                        });
-                        ui.tabPageNotice.fadeOut();
-                    });
-                    ui.tabPageNotice.fadeIn();
-                    setTimeout(function() {
-                        ui.tabPageNotice.fadeOut();
-                    }, 6000);
-                }
-            });
-        }
+        //         if (data !== "true") {
+        //             ui.tabPageNotice.find("a").on("click", function(e) {
+        //                 e.preventDefault();
+        //                 chrome.runtime.sendMessage({
+        //                     action: "setSetting",
+        //                     setting: "tabPageNotice",
+        //                     value: "true"
+        //                 });
+        //                 ui.tabPageNotice.fadeOut();
+        //             });
+        //             ui.tabPageNotice.fadeIn();
+        //             setTimeout(function() {
+        //                 ui.tabPageNotice.fadeOut();
+        //             }, 6000);
+        //         }
+        //     });
+        // }
     }
 
     init();

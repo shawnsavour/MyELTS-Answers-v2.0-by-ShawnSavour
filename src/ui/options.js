@@ -11,7 +11,7 @@
         e.preventDefault();
         $.getJSON('../../script.json', function(importedObj) {         
             app.import(importedObj.data, importedObj.v);
-            ui.optionsPopOver.hide();
+            // ui.optionsPopOver.hide();
         });
         
         
