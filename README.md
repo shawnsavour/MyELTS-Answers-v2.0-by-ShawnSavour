@@ -1,8 +1,7 @@
-# MyELTS-Answers-v2.0-by-ShawnSavour
+# MyELTS-Answers-v2.4-by-ShawnSavour
 Extension that give you answers of MyELTS  
-updated April 17, 2021 11:36 PM  
-Fixed Lisining test with video.  
-Fixed Cannot load Asignments.  
+updated May 22, 2021 11:36 PM  
+Update hack hỏ Self-study
 
 >Download this Extension by click the Green Button "Code" -> Download ZIP  
 >Extract ZIP file to a folder
@@ -10,7 +9,7 @@ Fixed Cannot load Asignments.
 How to use:  
 0. Like and subcribe my Youtube and Facebook fanpage, thank you!
 1. Enable Developer mode on Extension setting Chrome 
-2. Click Loadpackage and select 'MyELTS-Answers-v2.0-by-ShawnSavour' folder
+2. Click Loadpackage and select 'MyELTS-Answers-v2.4-by-ShawnSavour' folder
 3. Click the [S] icon of Extension 
 4. Only for the first time, you click "Active" button to active.
 5. Go to your assignments on MyELTS and do Assignments

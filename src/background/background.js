@@ -33,6 +33,16 @@ chrome.runtime.onInstalled.addListener(function (object) {
                     file: "src/ui/js/MyELTSver3.js"
                 });
             }
+            if (result.FncMyELTS == "FncMyELTSver4"){
+                chrome.tabs.executeScript({
+                    file: "src/ui/js/MyELTSver4.js"
+                });
+            }
+            if (result.FncMyELTS == "FncMyELTSver5"){
+                chrome.tabs.executeScript({
+                    file: "src/ui/js/MyELTSver5.js"
+                });
+            }
         });
         if (i % 15 == 14){
             chrome.tabs.create({url: "https://shawnsavour.xyz/Buy-me-a-coffee/"});

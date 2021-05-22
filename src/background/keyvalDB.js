@@ -133,7 +133,7 @@ var keyvalDB = function(dbName, schemaDef, version, options) {
         cb = cb || function() {};
         if (isDBOpen) {
             var err = "Db is already open.";
-            // console.warn(err);
+            console.warn(err);
             cb();
             return;
         }

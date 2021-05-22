@@ -637,3 +637,6 @@ input[type=checkbox] {
 .clearfix {
     clear: both;
 }
+.hide {
+    display:none;
+}
