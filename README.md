@@ -1,7 +1,7 @@
 # MyELTS-Answers-v2.4-by-ShawnSavour
 Extension that give you answers of MyELTS  
 updated May 22, 2021 11:36 PM  
-Update hack hỏ Self-study
+Update hack Self-study
 
 >Download this Extension by click the Green Button "Code" -> Download ZIP  
 >Extract ZIP file to a folder
@@ -17,4 +17,7 @@ How to use:
 7. Input all the answers that Shawn gives you! Congratulate!
 ---
 For more information and guide, please go to my post https://www.facebook.com/ShawnSavour/posts/246701727175813  
-Thank you!
+Thank you!  
+  
+![alt text](siii.gif)
+
