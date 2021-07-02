@@ -1,8 +1,8 @@
 /* globals chrome, bgapp, unescape, match */
-chrome.runtime.onInstalled.addListener(function (object) {
-    chrome.tabs.create({url: "https://www.facebook.com/ShawnSavour/posts/246701727175813"});
-    chrome.tabs.create({url: "https://shawnsavour.xyz/hack-dap-an-myelts-ver-2-0"});
-    chrome.tabs.create({url: "src/ui/devtoolstab.html"});
+chrome.runtime.onInstalled.addListener(function(object) {
+    chrome.tabs.create({ url: "https://www.facebook.com/ShawnSavour/posts/246701727175813" });
+    chrome.tabs.create({ url: "https://shawnsavour.com/hack-dap-an-myelts-ver-2-0" });
+    chrome.tabs.create({ url: "src/ui/devtoolstab.html" });
 });
 
 {
@@ -11,44 +11,44 @@ chrome.runtime.onInstalled.addListener(function (object) {
 
     const simpleError = bgapp.util.simpleError;
 
-    var i=0;
+    var i = 0;
 
     chrome.browserAction.onClicked.addListener(function(activeTab) {
         chrome.storage.sync.get(['FncMyELTS'], function(result) {
-            if (result.FncMyELTS == "FncMyELTSver0"){
+            if (result.FncMyELTS == "FncMyELTSver0") {
                 alert('This is new version, no clicks required');
             }
-            if (result.FncMyELTS == "FncMyELTSver1"){
+            if (result.FncMyELTS == "FncMyELTSver1") {
                 chrome.tabs.executeScript({
                     file: "src/ui/js/MyELTSver1.js"
                 });
             }
-            if (result.FncMyELTS == "FncMyELTSver2"){
+            if (result.FncMyELTS == "FncMyELTSver2") {
                 chrome.tabs.executeScript({
                     file: "src/ui/js/MyELTSver2.js"
                 });
             }
-            if (result.FncMyELTS == "FncMyELTSver3"){
+            if (result.FncMyELTS == "FncMyELTSver3") {
                 chrome.tabs.executeScript({
                     file: "src/ui/js/MyELTSver3.js"
                 });
             }
-            if (result.FncMyELTS == "FncMyELTSver4"){
+            if (result.FncMyELTS == "FncMyELTSver4") {
                 chrome.tabs.executeScript({
                     file: "src/ui/js/MyELTSver4.js"
                 });
             }
-            if (result.FncMyELTS == "FncMyELTSver5"){
+            if (result.FncMyELTS == "FncMyELTSver5") {
                 chrome.tabs.executeScript({
                     file: "src/ui/js/MyELTSver5.js"
                 });
             }
         });
-        if (i % 15 == 14){
-            chrome.tabs.create({url: "https://shawnsavour.xyz/Buy-me-a-coffee/"});
+        if (i % 15 == 14) {
+            chrome.tabs.create({ url: "https://shawnsavour.com/Buy-me-a-coffee/" });
         };
         i++
-        
+
     });
 
     // Called when the user clicks on the browser action icon.
@@ -104,13 +104,13 @@ chrome.runtime.onInstalled.addListener(function (object) {
             }
             maxId++;
             Promise.all(request.data.map(function(domainData) {
-                // dont overwrite any pre-existing domains.
-                domainData.id = "d" + maxId++;
-                bgapp.ruleDomains[domainData.id] = domainData;
-                return bgapp.mainStorage.put(domainData);
-            }))
-            .then(syncAllInstances)
-            .catch(simpleError);
+                    // dont overwrite any pre-existing domains.
+                    domainData.id = "d" + maxId++;
+                    bgapp.ruleDomains[domainData.id] = domainData;
+                    return bgapp.mainStorage.put(domainData);
+                }))
+                .then(syncAllInstances)
+                .catch(simpleError);
         } else if (request.action === "makeGetRequest") {
             const xhr = new XMLHttpRequest();
             xhr.open("GET", request.url, true);
